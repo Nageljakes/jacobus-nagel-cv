@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nageljakes.github.io/jacobus-nagel-cv/sitemap.xml

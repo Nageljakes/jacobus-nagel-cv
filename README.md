@@ -8,9 +8,32 @@ A responsive, static CV website inspired by the dark glassmorphism visual langua
 public/
 ├── index.html
 ├── styles.css
-└── script.js
+├── script.js
+├── favicon.svg
+├── robots.txt
+├── sitemap.xml
+└── assets/
+    ├── ai-sales-illustration.jpg
+    └── Jacobus-Nagel-CV.pdf   ← generated, see below
+scripts/
+└── build-pdf.sh
 wrangler.jsonc
 ```
+
+## Regenerate the downloadable CV PDF
+
+`public/assets/Jacobus-Nagel-CV.pdf` is rendered from the site itself using the
+print stylesheet, so it always matches the page. It is committed to the repo,
+which means **it does not update automatically** — after editing CV content in
+`public/index.html`, regenerate it:
+
+```bash
+./scripts/build-pdf.sh
+```
+
+Requires a Chrome/Chromium binary (set `CHROME=/path/to/chrome` to override
+autodetection). The script expands the collapsed "earlier experience" section
+before rendering, so the PDF carries the full career history.
 
 ## Preview locally
 
