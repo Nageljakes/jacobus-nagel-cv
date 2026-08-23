@@ -8,9 +8,8 @@ Beyond the usual CV sections it carries a few things worth knowing about:
 
 - **A showcase for Tiny.** The agent behind Jaxtech gets its own section with a
   direct call to action pointing at <https://nageljakes.github.io/jaxtechweb/>.
-  That is the address to link: some South African carriers filter Cloudflare's
-  shared `workers.dev` domain, where the same app also runs at
-  <https://tiny.jaxtech.workers.dev/>.
+  That is the only address the CV gives out — it is the one that loads on every
+  South African network.
 - **Receipts.** A section of checkable evidence — live systems, public source
   repositories, the YouTube channel — instead of a wall of adjectives.
 - **Evergreen figures.** Anything that counts elapsed time ("12 years in
