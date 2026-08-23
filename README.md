@@ -7,10 +7,10 @@ shadows instead of soft glow.
 Beyond the usual CV sections it carries a few things worth knowing about:
 
 - **A showcase for Tiny.** The agent behind Jaxtech gets its own section with a
-  direct call to action, pointing at both <https://tiny.jaxtech.workers.dev/>
-  and the GitHub Pages mirror at <https://nageljakes.github.io/jaxtechweb/>
-  (some South African carriers filter the shared `workers.dev` domain, so the
-  mirror is the address that always loads).
+  direct call to action pointing at <https://nageljakes.github.io/jaxtechweb/>.
+  That is the address to link: some South African carriers filter Cloudflare's
+  shared `workers.dev` domain, where the same app also runs at
+  <https://tiny.jaxtech.workers.dev/>.
 - **Receipts.** A section of checkable evidence — live systems, public source
   repositories, the YouTube channel — instead of a wall of adjectives.
 - **Evergreen figures.** Anything that counts elapsed time ("12 years in
