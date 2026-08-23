@@ -421,6 +421,90 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .portrait figcaption em { font-style: normal; color: var(--amber); }
 
+/* ── Showcase: the tool itself ─────────────────────────
+   The one section on the page that is a product pitch rather than a CV
+   entry, so it gets the loudest treatment: a bordered feature panel, a
+   real avatar and the only oversized call to action on the site. */
+.showcase {
+  display: grid; gap: clamp(1.6rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
+  align-items: center;
+  border: 2px solid var(--line-strong); border-radius: var(--r-xl);
+  padding: clamp(1.7rem, 4.5vw, 3rem);
+  background:
+    radial-gradient(ellipse 70% 90% at 88% 12%, rgba(53,198,216,.13), transparent 62%),
+    var(--surface);
+  box-shadow: var(--hard);
+  margin-top: 2.4rem;
+}
+@media (max-width: 980px) { .showcase { grid-template-columns: minmax(0, 1fr); } }
+.showcase-copy { min-width: 0; }
+.showcase-copy .h2 { max-width: 16ch; }
+
+.showcase-points { list-style: none; display: grid; gap: .55rem; margin: 1.3rem 0 1.7rem; }
+.showcase-points li {
+  display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: .6rem;
+  font-size: .93rem; color: var(--muted);
+}
+.showcase-points li::before {
+  content: ''; width: 9px; height: 9px; margin-top: .5rem;
+  background: var(--amber); transform: rotate(45deg);
+}
+.showcase-points strong { color: var(--text); }
+
+.showcase-actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+.showcase-note {
+  font-size: .82rem; color: var(--muted-dim); line-height: 1.55;
+  margin-top: 1.1rem; max-width: 52ch;
+}
+.showcase-note a { color: var(--teal); border-bottom: 1px solid rgba(53,198,216,.35); }
+.showcase-note a:hover { color: var(--text); border-bottom-color: var(--text); }
+
+/* The card standing in for the product. It is a still, clearly-labelled
+   example — not a mock of a live session, which would be a lie on a CV. */
+.tinycard {
+  border: 2px solid var(--line-strong); border-radius: var(--r-lg);
+  background: rgba(3, 5, 7, .82); overflow: hidden; min-width: 0;
+  box-shadow: var(--hard-teal);
+}
+.tinycard-top {
+  display: flex; align-items: center; gap: .9rem;
+  padding: 1.15rem 1.2rem; border-bottom: 1px solid var(--line);
+}
+.tiny-avatar {
+  width: 62px; height: 62px; flex: none; border-radius: 50%;
+  border: 2px solid var(--coral); box-shadow: 4px 4px 0 rgba(0,0,0,.6);
+  background: #0a1017;
+}
+.tinycard-id { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.tinycard-id b { font-family: var(--font-display); text-transform: uppercase; font-size: 1.15rem; letter-spacing: -.01em; }
+.tinycard-id span { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em; color: var(--muted-dim); }
+
+.tiny-chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+.tiny-chips div { padding: .9rem .6rem; text-align: center; border-right: 1px solid var(--line); min-width: 0; }
+.tiny-chips div:last-child { border-right: 0; }
+.tiny-chips b { display: block; font-family: var(--font-display); font-size: 1.35rem; line-height: 1; color: var(--teal); }
+.tiny-chips span { display: block; font-size: .64rem; text-transform: uppercase; letter-spacing: .09em; color: var(--muted-dim); margin-top: .3rem; }
+
+.tiny-sample { padding: 1.15rem 1.2rem; display: grid; gap: .6rem; }
+.tiny-sample-label {
+  font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--coral);
+}
+.tiny-bubble {
+  border: 1px solid var(--line); border-radius: var(--r-sm) var(--r-sm) var(--r-sm) 2px;
+  padding: .65rem .8rem; font-size: .87rem; color: var(--muted); background: rgba(255,255,255,.03);
+}
+.tiny-bubble.you {
+  border-radius: var(--r-sm) var(--r-sm) 2px var(--r-sm);
+  border-color: rgba(53,198,216,.35); color: var(--text); justify-self: end; max-width: 88%;
+}
+.tiny-foot {
+  padding: .75rem 1.2rem; border-top: 1px solid var(--line);
+  font-family: var(--font-mono); font-size: .66rem; letter-spacing: .05em; color: var(--muted-dim);
+  background: rgba(255,255,255,.02);
+}
+
 /* ── Receipts: checkable evidence, not adjectives ──── */
 .receipts {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
@@ -655,7 +739,7 @@ h4 { font-size: 1rem; font-weight: 600; }
    where the desktop layout starts stacking awkwardly rather than simply
    getting narrower. */
 @media (max-width: 560px) {
-  .hero-actions .btn, .contact-actions .btn { flex: 1 1 100%; }
+  .hero-actions .btn, .contact-actions .btn, .showcase-actions .btn { flex: 1 1 100%; }
   .cc-id span { display: none; }
   .cc-stat { padding: .9rem .5rem; }
   .cc-stat b { font-size: 1.45rem; }
@@ -699,11 +783,12 @@ h4 { font-size: 1rem; font-weight: 600; }
   .kicker { color: #000; font-size: 7.5pt; margin-bottom: 4pt; }
   .kicker::before { background: #000; }
 
-  .hero-grid, .split, .tracks { display: block; }
+  .hero-grid, .split { display: block; }
   /* Two columns rather than one long stack — it saves several sheets of
      paper without making anything harder to read at this size. */
-  .cards, .receipts, .creds { grid-template-columns: 1fr 1fr; gap: 6pt; }
-  .console, .panel, .card, .receipt, .track, .cred, .tl-body, .earlier, .endcta, .loop-node, .loop-core {
+  .cards, .receipts, .creds, .tracks { grid-template-columns: 1fr 1fr; gap: 6pt; }
+  .console, .panel, .card, .receipt, .track, .cred, .tl-body, .earlier, .endcta,
+  .loop-node, .loop-core, .showcase, .tinycard {
     border: .75pt solid #999 !important; box-shadow: none !important; background: #fff !important;
     backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
     page-break-inside: avoid; transform: none !important;
@@ -730,6 +815,27 @@ h4 { font-size: 1rem; font-weight: 600; }
     content: ' (' attr(href) ')'; font-size: 8pt; color: #444; word-break: break-all;
   }
   a { color: #000 !important; border: 0 !important; text-decoration: underline; }
+
+  /* The showcase buttons are the one call to action worth keeping on
+     paper, so they print as plain links carrying their address rather
+     than as empty bordered boxes. */
+  /* Tall enough to strand a whole sheet if it refuses to split. */
+  .showcase { display: block; padding: 8pt 10pt; page-break-inside: auto; }
+  .showcase-actions { display: block; }
+  .showcase-actions .btn {
+    display: block; padding: 0 0 2pt; border: 0 !important; box-shadow: none !important;
+    background: none !important; font-size: 10.5pt; font-weight: 600;
+    text-transform: none; letter-spacing: 0; text-decoration: underline;
+    justify-content: flex-start; text-align: left;
+  }
+  .showcase-actions .btn[href^="http"]::after {
+    content: ' (' attr(href) ')'; font-size: 8pt; font-weight: 400; color: #444; word-break: break-all;
+  }
+  .tiny-chips { display: flex; }
+  /* The worked example is a screen device — on paper the card only needs to
+     say what Tiny is and how big it is. */
+  .tiny-sample, .tiny-foot { display: none; }
+  .tiny-avatar { border-color: #999 !important; box-shadow: none !important; }
 
   .footer { border-top: .75pt solid #999; margin-top: 8pt; }
   .footer-bar { padding-block: 6pt; font-size: 8pt; word-break: break-word; }

@@ -44,6 +44,7 @@
   </a>
   <ul class="nav-links" id="nav-links">
     <li><a href="#profile">Profile</a></li>
+    <li><a href="#tiny">The tool</a></li>
     <li><a href="#receipts">Receipts</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#capabilities">Capabilities</a></li>
@@ -67,7 +68,7 @@
       <p class="hero-sub reveal">Twelve years across a dealership — marketing, national leads, the showroom floor, the service desk and the call centre — and two years building the AI agents that take the admin off all of it. Same person, both sides of the counter.</p>
       <div class="hero-actions reveal">
         <a class="btn btn-primary btn-lg" href="mailto:nageljakes@outlook.com">Get in touch</a>
-        <a class="btn btn-ghost btn-lg" href="#receipts">See the receipts</a>
+        <a class="btn btn-ghost btn-lg" href="#tiny">See what I built</a>
       </div>
     </div>
 
@@ -111,8 +112,8 @@
 <!-- ══ TICKER ══ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Automotive retail</span><span>Sales · service · call centre</span><span>AI agents that ship</span><span>Pretoria, South Africa</span>
-    <span>Automotive retail</span><span>Sales · service · call centre</span><span>AI agents that ship</span><span>Pretoria, South Africa</span>
+    <span>Automotive retail</span><span>Sales · service · call centre</span><span>Meet Tiny — my AI agent</span><span>Pretoria, South Africa</span>
+    <span>Automotive retail</span><span>Sales · service · call centre</span><span>Meet Tiny — my AI agent</span><span>Pretoria, South Africa</span>
   </div>
 </div>
 
@@ -133,6 +134,55 @@
   </div>
 </section>
 
+<!-- ══ THE TOOL ══ -->
+<section class="section" id="tiny" data-numbered aria-labelledby="tiny-h">
+  <div class="wrap">
+    <p class="kicker reveal">The tool</p>
+    <h2 class="h2 reveal" id="tiny-h">The best thing I have built is online right now.</h2>
+    <p class="lede reveal">Most CVs describe the work. This one lets you use it. Tiny is an AI agent I built and run — open it, give it a real task, and see what it does before you decide whether any of this CV is worth your time.</p>
+
+    <div class="showcase reveal">
+      <div class="showcase-copy">
+        <h3 class="visually-hidden">About Tiny</h3>
+        <p class="lede" style="margin-bottom:0">An agent, not a chatbot. It plans a task out into steps, calls the tools it needs, and keeps going until the job is finished.</p>
+        <ul class="showcase-points">
+          <li><span><strong>198 skills across 20 domains</strong> — business admin, reporting, research, property and energy automation.</span></li>
+          <li><span><strong>Live production infrastructure</strong> — Cloudflare Workers AI, vector retrieval, <code>D1</code> and <code>KV</code>, Turnstile and rate limiting.</span></li>
+          <li><span><strong>Built and run by one person</strong> — every line of it, nights and weekends, for two years.</span></li>
+        </ul>
+
+        <div class="showcase-actions">
+          <a class="btn btn-primary btn-lg" href="https://tiny.jaxtech.workers.dev/" target="_blank" rel="noopener">Click here to talk to Tiny ↗</a>
+          <a class="btn btn-ghost" href="https://nageljakes.github.io/jaxtechweb/" target="_blank" rel="noopener">Mirror site ↗</a>
+        </div>
+
+        <p class="showcase-note">Two addresses for one site: some South African mobile carriers filter Cloudflare&rsquo;s shared <code>workers.dev</code> domain, so <a href="https://nageljakes.github.io/jaxtechweb/" target="_blank" rel="noopener">nageljakes.github.io/jaxtechweb</a> is a mirror that always loads. The chat works on both.</p>
+      </div>
+
+      <div class="tinycard">
+        <div class="tinycard-top">
+          <img class="tiny-avatar" src="assets/tiny.jpg" alt="Tiny, the Jaxtech agent — a robot avatar badge marked Proudly South African Bot" width="62" height="62" loading="lazy" decoding="async">
+          <span class="tinycard-id">
+            <b>Tiny</b>
+            <span>agentic harness · gauteng</span>
+          </span>
+        </div>
+        <div class="tiny-chips">
+          <div><b>198</b><span>Skills</span></div>
+          <div><b>20</b><span>Domains</span></div>
+          <div><b>24/7</b><span>On call</span></div>
+        </div>
+        <div class="tiny-sample">
+          <p class="tiny-sample-label">Example task</p>
+          <p class="tiny-bubble you">Pull last month&rsquo;s enquiries into a summary and tell me which source actually converted.</p>
+          <p class="tiny-bubble">Plans the steps, reads the data, runs the numbers, comes back with the answer — not a suggestion that you go and do it.</p>
+        </div>
+        <p class="tiny-foot">Go and give it a harder one than that.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ RECEIPTS ══ -->
 <section class="section" id="receipts" data-numbered aria-labelledby="receipts-h">
   <div class="wrap">
@@ -144,7 +194,7 @@
       <div class="receipt reveal">
         <span class="receipt-tag">In production</span>
         <b>The agent I built is live and public</b>
-        <p>Tiny runs at <a href="https://tiny.jaxtech.workers.dev/" rel="noopener" target="_blank">tiny.jaxtech.workers.dev</a> on Cloudflare Workers AI, with a vector index for retrieval, <code>D1</code> and <code>KV</code> behind the enquiry form, Turnstile on submissions and per-IP rate limiting. Talk to it yourself.</p>
+        <p>Tiny runs at <a href="https://tiny.jaxtech.workers.dev/" rel="noopener" target="_blank">tiny.jaxtech.workers.dev</a> — or its <a href="https://nageljakes.github.io/jaxtechweb/" rel="noopener" target="_blank">mirror</a> — on Cloudflare Workers AI, with a vector index for retrieval, <code>D1</code> and <code>KV</code> behind the enquiry form, Turnstile on submissions and per-IP rate limiting. Talk to it yourself.</p>
       </div>
       <div class="receipt reveal">
         <span class="receipt-tag">Counted, not claimed</span>
@@ -448,6 +498,7 @@
         <span>Pretoria, South Africa</span>
         <span><a href="mailto:nageljakes@outlook.com">nageljakes@outlook.com</a></span>
         <span><a href="https://tiny.jaxtech.workers.dev/" rel="noopener" target="_blank">tiny.jaxtech.workers.dev</a></span>
+        <span><a href="https://nageljakes.github.io/jaxtechweb/" rel="noopener" target="_blank">nageljakes.github.io/jaxtechweb</a></span>
         <span><a href="https://github.com/Nageljakes" rel="noopener" target="_blank">github.com/Nageljakes</a></span>
         <span>References on request</span>
       </p>
@@ -487,7 +538,8 @@
   "sameAs": [
     "https://github.com/Nageljakes",
     "https://www.youtube.com/@nageljakes",
-    "https://tiny.jaxtech.workers.dev/"
+    "https://tiny.jaxtech.workers.dev/",
+    "https://nageljakes.github.io/jaxtechweb/"
   ]
 }
 </script>
